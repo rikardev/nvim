@@ -11,3 +11,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+--- Remove all trailing whitespace on save
+local TrimWhiteSpaceGrp = vim.api.nvim_create_augroup('TrimWhiteSpaceGrp', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePre', {
+  command = [[:%s/\s\+$//e]],
+  group = TrimWhiteSpaceGrp,
+})
+
+vim.api.nvim_create_autocmd(
+  { 'BufRead', 'BufNewFile' },
+  -- { pattern = { "*.txt", "*.md", "*.tex" }, command = [[setlocal spell<cr> setlocal spelllang=en,de<cr>]] }
+  {
+    pattern = { '*.txt', '*.md', '*.tex', '*.typ' },
+    callback = function()
+      vim.opt.spell = true
+      vim.opt.spelllang = 'en,sv'
+    end,
+    desc = 'Enable spell checking for certain file types',
+  }
+)
