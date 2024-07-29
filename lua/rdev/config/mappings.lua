@@ -45,3 +45,4 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- nvim-tree mappings
 vim.keymap.set('n', '<C-e>', '<cmd>NvimTreeFocus<CR>')
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>')
