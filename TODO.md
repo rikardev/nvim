@@ -5,3 +5,4 @@
 - undotree
 - harpoon
 - copilot
+- quickfix list

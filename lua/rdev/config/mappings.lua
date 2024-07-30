@@ -44,5 +44,5 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- nvim-tree mappings
-vim.keymap.set('n', '<C-e>', '<cmd>NvimTreeFocus<CR>')
-vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>')
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeFocus<CR>')
+-- vim.keymap.set('n', '<C-n><C-n>', '<cmd>NvimTreeToggle<CR>')
