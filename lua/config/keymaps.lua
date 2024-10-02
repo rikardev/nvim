@@ -11,9 +11,3 @@
 -- Center screen after moving up or down
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down" })
-
--- Move lines with alt + j/k
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "move line up" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "move line down" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "move line up" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "move line down" })
